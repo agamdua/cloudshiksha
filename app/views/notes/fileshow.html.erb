@@ -1,0 +1,17 @@
+<h1>Listing files</h1>
+
+<table>
+  <tr>
+    <th>Files</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% Dir.foreach("files/notes") do |t| %>
+  <tr>
+  	<% @filen = File.expand_path(t) %>
+    <td><%= link_to t, @filen %></td>
+  </tr>
+<% end %>
+</table>
